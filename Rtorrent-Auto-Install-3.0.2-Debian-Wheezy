@@ -730,9 +730,9 @@ function INSTALL_RTORRENT {
 	cd rtorrent
 
 	# Download and install libtorrent
-	curl -L https://github.com/rakshasa/libtorrent/archive/0.13.4.tar.gz -o libtorrent-0.13.4.tar.gz
-	tar -zxvf libtorrent-0.13.4.tar.gz
-	cd libtorrent-0.13.4
+	curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent-0.13.6.tar.gz
+	tar -zxvf libtorrent-0.13.6.tar.gz
+	cd libtorrent-0.13.6
 	./autogen.sh
 	./configure
 	make
@@ -741,9 +741,9 @@ function INSTALL_RTORRENT {
 	cd ..
 
 	# Download and install rtorrent
-	curl -L https://github.com/rakshasa/rtorrent/archive/0.9.4.tar.gz -o rtorrent-0.9.4.tar.gz
-	tar -zxvf rtorrent-0.9.4.tar.gz
-	cd rtorrent-0.9.4
+	curl -L http://rtorrent.net/downloads/rtorrent-0.9.6.tar.gz -o rtorrent-0.9.6.tar.gz
+	tar -zxvf rtorrent-0.9.6.tar.gz
+	cd rtorrent-0.9.6
 	./autogen.sh
 	./configure --with-xmlrpc-c
 	make
@@ -908,8 +908,8 @@ SET_WEB_USER
 # NOTICE: Change lib, rtorrent, rutorrent versions when update are available
 while true; do
 	HEADER
-	echo " ${BOLD}rTorrent version:${NORMAL} ${RED}0.9.4${NORMAL}"
-	echo " ${BOLD}libTorrent version:${NORMAL} ${RED}0.13.4${NORMAL}"
+	echo " ${BOLD}rTorrent version:${NORMAL} ${RED}0.9.6${NORMAL}"
+	echo " ${BOLD}libTorrent version:${NORMAL} ${RED}0.13.6${NORMAL}"
 	echo " ${BOLD}ruTorrent version:${NORMAL} ${RED}3.6${NORMAL}"
 	echo
 	echo " ${BOLD}rTorrent user:${NORMAL}${GREEN} $RTORRENT_USER${NORMAL}"
